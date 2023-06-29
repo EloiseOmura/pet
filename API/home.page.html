@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <div class="divPrincipal">
+    <ion-row>
+      <ion-col>
+        <ion-button shape="block" (click)="gerar()">GERAR IMAGEM</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="{{imagem}}" width="200" height="200" />
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>PETSHOP - Cadastro de Animais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="espaco">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome <span style="color: red">*</span></ion-label>
+      <ion-input type="text" placeholder="Ex: Thor" [(ngModel)]="cadastro.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Raça<span style="color: red">*</span></ion-label>
+      <ion-input type="text" placeholder="Ex: Pastor Alemão" [(ngModel)]="cadastro.raca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Idade<span style="color: red">*</span></ion-label>
+      <ion-input type="text" placeholder="Ex: 5 anos" [(ngModel)]="cadastro.idade"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</div>
+</ion-content>
+
+<ion-footer>
+<ion-row>
+  <ion-col>
+    <ion-button shape="block" color="success"
+    (click)="cadastrar()">{{LabelBotao}}</ion-button>
+  </ion-col>
+</ion-row>
+</ion-footer>

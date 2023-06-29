@@ -1,20 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>PETSHOP</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div
+    class="img_conn"
+    [style.background-image]="'url(' + imagemBackground + ')'"
+  ></div>
+  <div class="divPrincipal">
+    <!--<ion-row>
+      <ion-col>
+        <ion-button shape="block" >GERAR IMAGEM</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="{{imagem}}" width="200" height="200" />
+      </ion-col>
+    </ion-row>-->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="espaco">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating"
+            >Nome <span style="color: red">*</span></ion-label
+          >
+          <ion-input
+            type="text"
+            placeholder="Ex: Thor"
+            [(ngModel)]="cadastro.nome"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating"
+            >Raça<span style="color: red">*</span></ion-label
+          >
+          <ion-input
+            type="text"
+            placeholder="Ex: Pastor Alemão"
+            [(ngModel)]="cadastro.raca"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating"
+            >Idade<span style="color: red">*</span></ion-label
+          >
+          <ion-input
+            type="text"
+            placeholder="Ex: 5 anos"
+            [(ngModel)]="cadastro.idade"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button shape="block" color="warning" (click)="cadastrar()"
+        >{{LabelBotao}}</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

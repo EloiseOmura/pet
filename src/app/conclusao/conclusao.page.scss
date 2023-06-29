@@ -1,0 +1,69 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 300%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 35px;
+  }
+  
+  .card-content {
+    padding: 30px;
+  }
+  
+  .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .card-description {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: radius;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+  
+  ion-content {
+    --background: url(../../assets/conclusao.jpg) 0 0/100%;
+  }

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>CADASTRO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let end of cadastros">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> {{end.nomes}} </ion-card-title>
+        <ion-card-subtitle>{{end.racas}} - {{end.idades}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <img src="{{end.imagens}}" width="250" height="200" />
+        <ion-row>
+          <ion-col size="4"></ion-col>
+            <ion-col>
+            <ion-button
+              size="small"
+              color="danger"
+              (click)="deletar(end.nomes)"
+            >
+              <ion-icon name="trash-outline"></ion-icon>
+              <ion-label style="margin-top: 0; margin-left: 1px"
+                >Excluir</ion-label
+              >
+            </ion-button>
+            <ion-col >
+              <ion-button size="small" color="primary" fill="outline" (click)="voltar()">
+                <ion-icon name="create-outline"></ion-icon>
+                <ion-label style="margin-top: 0; margin-left: 6px; ">Voltar</ion-label>
+              </ion-button>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>   
+    </ion-card>
+  </div>
+
+  <ion-fab>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+
+<!--
+    <ion-card-content>
+      <ion-card-title>Dados do Pet</ion-card-title>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-label></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Raça:</ion-label>
+        <ion-label></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Idade:</ion-label>
+        <ion-label></ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>-->
